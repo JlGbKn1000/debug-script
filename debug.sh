@@ -1,5 +1,8 @@
-rm -r server
+rm -rf server
 mkdir server
+echo "#By changing the setting below to TRUE you are indicating your agreement to our EULA (https://account.mojang.com/documents/minecraft_eula).
+#Mon Mar 20 21:15:37 PDT 2017
+eula=true" => "server/eula.txt"
 echo "마인크래프트 버전: "
 read VERSION
 curl -X GET "https://papermc.io/api/v2/projects/paper/versions/$VERSION" -H  "accept: application/json"
